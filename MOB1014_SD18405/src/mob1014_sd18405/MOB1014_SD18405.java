@@ -23,12 +23,13 @@ public class MOB1014_SD18405 {
         System.out.println("Ha Noi");
         System.out.println("Ha Noi");
         System.out.println("Ha Noi");
-
+        System.out.println("Khanh Huyen");
         //click chuột phải+ Run File: chạy CT
         //ctrl + shift+ mũi tên lên xuống: copy code
         //ctrl + /: comment code
         //click chuột phải+ Format code
         // hoặc Alf+ Shift + F
+        
     }
 
 }
