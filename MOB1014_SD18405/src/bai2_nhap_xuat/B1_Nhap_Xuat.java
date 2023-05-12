@@ -44,5 +44,4 @@ nhập và xuất thông tin về Trà sữa NYC thích:
 - giá: int
 - số lượng: int
 - size: char (S, M, L)
-
 */
