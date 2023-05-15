@@ -52,6 +52,10 @@ public class B4_If_Else {
         }else{
             System.out.println("Mua kia morning");
         }  
+        
+        System.out.println("Nhap gioi tinh: ");
+        int gioiTinh = Integer.parseInt(sc.nextLine());
+        System.out.println("Gioi tinh: "+ (gioiTinh == 1 ? "Duc": "Cai"));
     }
 }
 /* 
