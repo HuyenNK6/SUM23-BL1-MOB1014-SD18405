@@ -24,6 +24,9 @@ public class Main {
             System.out.println("2. Xuat DS");
             System.out.println("3. Tim kiem theo id");
             System.out.println("4. Tim kiem theo khoang");
+            System.out.println("5. Xoa");
+            System.out.println("6. Sua");
+            System.out.println("7. Sap xep");
             System.out.println("0. Thoat CT");
             System.out.println("---------------------");
             System.out.println("-----Moi chon:");
@@ -39,7 +42,16 @@ public class Main {
                     ql.timKiemTheoId();
                     break;
                 case 4:
-                    
+                    ql.timKiemTheoKhoang();
+                    break;
+                case 5:
+                    ql.xoa();
+                    break;
+                case 6:
+                    ql.sua();
+                    break;
+                case 7:
+                    ql.sapXep();
                     break;
                 case 0:
                     System.exit(0);
