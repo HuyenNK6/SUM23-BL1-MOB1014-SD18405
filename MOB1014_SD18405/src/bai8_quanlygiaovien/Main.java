@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package bai_8_quanlygiaovien;
+package bai8_quanlygiaovien;
 
 import java.util.Scanner;
 
@@ -27,6 +27,7 @@ public class Main {
             System.out.println("5. Xoa");
             System.out.println("6. Sua");
             System.out.println("7. Sap xep");
+            System.out.println("8. Ke thua");
             System.out.println("0. Thoat CT");
             System.out.println("---------------------");
             System.out.println("-----Moi chon:");
@@ -52,6 +53,9 @@ public class Main {
                     break;
                 case 7:
                     ql.sapXep();
+                    break;
+                case 8:
+                    ql.keThua();
                     break;
                 case 0:
                     System.exit(0);

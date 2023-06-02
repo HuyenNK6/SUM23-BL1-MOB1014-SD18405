@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package bai_8_quanlygiaovien;
+package bai8_quanlygiaovien;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -137,5 +137,10 @@ public class QLGV {
             }
         });
         xuatDS();
+    }
+    
+    public void keThua(){
+        GiaoVienPoly gv = new GiaoVienPoly("PTPM", 6, "Huyennk6", 30);
+        gv.inThongTin();
     }
 }
