@@ -30,8 +30,8 @@ public class SachService {
         String input;
         do {
             System.out.println("Nhap " + msg + ": ");
-            input= _sc.nextLine();
-            if(!input.matches(regex)){
+            input = _sc.nextLine();
+            if (!input.matches(regex)) {
                 System.out.println("Moi nhap lai!!");
             }
         } while (!input.matches(regex));
@@ -76,7 +76,7 @@ public class SachService {
 
 //    3. Xuất danh sách Sách có giá trong khoảng người dùng nhập
 //    4. Sắp xếp giảm dần theo năm xuất bản
-//    5. Tìm kiếm sách theo Code => equals SACH001 => SACH00111
+//    5. Tìm kiếm sách theo Code => equals SACH001 => SACH00111 => trả về đối tượng
 //    6. Xóa Sách theo code
 //    7. Sắp xếp tăng dần theo tên
 //    8. Sắp xếp giảm dần theo giá
@@ -100,6 +100,46 @@ public class SachService {
     }
 //    12. Xuất thông tin của Sách có giá lớn nhất và bé nhất
 //    13. Đếm xem có tất cả bao nhiêu Sách có giá ngoài khoảng người dùng nhập
-//    14. Tìm tất cả sách có mã bắt đầu bằng "SGK" => startwith
+    //nếu làm void thì ko sao cả
 
+    public int demGiaNgoaiKhoang() {
+        int dem = 0;
+        System.out.println("Nhap gia min= ");
+        double min = Double.parseDouble(_sc.nextLine());
+        System.out.println("Nhap gia max= ");
+        double max = Double.parseDouble(_sc.nextLine());
+        for (int i = 0; i < _lstSachs.size(); i++) {
+            if (_lstSachs.get(i).getGia() < min
+                    || _lstSachs.get(i).getGia() > max) {
+                _lstSachs.get(i).inThongTin();
+                dem++;
+            }
+        }
+        /// kiểm tra đếm.....thông báo
+        return dem;
+    }
+
+//    14. Tìm tất cả sách có mã bắt đầu bằng "SGK" => startwith
+    public ArrayList<Sach> getDSTheoMaBatDau() {
+        ArrayList <Sach> list= new ArrayList<>();
+        for (int i = 0; i < _lstSachs.size(); i++) {
+            if (_lstSachs.get(i).getCode().startsWith("SGK")) {
+               //thêm đối tượng Sách vào trong list nếu bđ bằng SGK
+               list.add(_lstSachs.get(i));
+            }
+        }
+       return list;
+    }
+    public void inDSTheoMaBatDau(){
+        ArrayList <Sach> listResult= getDSTheoMaBatDau();
+        if(listResult.isEmpty()){
+            System.out.println("Khong tim thay sach co ma bdau bang SGK!!");
+            return;
+        }
+        System.out.println("DS Sach co ma bd bang SGK:");
+        for (Sach sach : listResult) {
+            sach.inThongTin();
+        }
+    }
+    
 }

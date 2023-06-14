@@ -47,6 +47,11 @@ public class Main {
                 case 11:
                     service.dsSachTheoTenGanDung();
                     break;
+                case 13:
+                    int dem = service.demGiaNgoaiKhoang();
+                    System.out.println("dem= "+ dem);
+                case 14:
+                    service.inDSTheoMaBatDau();
                 case 0:
                     System.exit(0);
                     break;
